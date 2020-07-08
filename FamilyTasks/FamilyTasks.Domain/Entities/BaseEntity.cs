@@ -1,17 +1,15 @@
 ﻿using System;
-using Microsoft.AspNetCore.Identity;
 
 namespace FamilyTasks.Domain.Entities
 {
-    public class User : IdentityUser<Guid>
+    public class BaseEntity
     {
-        public User()
+        protected BaseEntity()
         {
-            base.Id = new Guid();
+            Id = new Guid();
         }
 
-        public string FirstName { get; set; }
-        public string Surname { get; set; }
+        public Guid Id { get; set; }
         public Guid CreatedBy { get; set; }
         public Guid ModifiedBy { get; set; }
         public DateTime CreatedDate { get; set; }
