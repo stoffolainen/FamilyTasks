@@ -1,3 +1,4 @@
+using System;
 using System.Threading.Tasks;
 using FamilyTasks.Domain.Entities;
 using Microsoft.AspNetCore.Builder;
@@ -27,7 +28,7 @@ namespace FamilyTasks.Server
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseFileContextDatabase(location: Configuration.GetValue<string>("FilePath")));
 
-            services.AddIdentity<User, IdentityRole>(options =>
+            services.AddIdentity<User, IdentityRole<Guid>>(options =>
                 {
                     options.Password.RequiredLength = 6;
                     options.Password.RequireUppercase = false;
