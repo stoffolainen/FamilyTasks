@@ -26,7 +26,7 @@ namespace FamilyTasks.Server
         {
             services.AddControllersWithViews();
             services.AddRazorPages();
-            services.AddDbContext<ApplicationDbContext>(options => options.UseFileContextDatabase());
+            services.AddDbContext<ApplicationDbContext>(options => options.UseFileContextDatabase(location: Configuration.GetValue<string>("FilePath")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
