@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FamilyTasks.Client", "Famil
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FamilyTasks.Shared", "FamilyTasks\Shared\FamilyTasks.Shared.csproj", "{D5565A2A-FAE9-4833-99D8-1E45116E4646}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FamilyTasks.Domain", "FamilyTasks.Domain\FamilyTasks.Domain.csproj", "{7C071E8D-7BFA-43A6-9F14-529E81EB8A21}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FamilyTasks.Infrastructure", "FamilyTasks.Infrastructure\FamilyTasks.Infrastructure.csproj", "{3969F3F0-35DC-4798-B22E-6A2616BAF1E6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{D5565A2A-FAE9-4833-99D8-1E45116E4646}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5565A2A-FAE9-4833-99D8-1E45116E4646}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5565A2A-FAE9-4833-99D8-1E45116E4646}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C071E8D-7BFA-43A6-9F14-529E81EB8A21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C071E8D-7BFA-43A6-9F14-529E81EB8A21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C071E8D-7BFA-43A6-9F14-529E81EB8A21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C071E8D-7BFA-43A6-9F14-529E81EB8A21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3969F3F0-35DC-4798-B22E-6A2616BAF1E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3969F3F0-35DC-4798-B22E-6A2616BAF1E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3969F3F0-35DC-4798-B22E-6A2616BAF1E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3969F3F0-35DC-4798-B22E-6A2616BAF1E6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

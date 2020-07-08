@@ -6,6 +6,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System.Linq;
+using FileContextCore;
+using FamilyTasks.Infrastructure.Contexts;
 
 namespace FamilyTasks.Server
 {
@@ -22,9 +24,9 @@ namespace FamilyTasks.Server
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-
             services.AddControllersWithViews();
             services.AddRazorPages();
+            services.AddDbContext<ApplicationDbContext>(options => options.UseFileContextDatabase());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -42,11 +44,10 @@ namespace FamilyTasks.Server
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
-            app.UseBlazorFrameworkFiles();
-            app.UseStaticFiles();
-
-            app.UseRouting();
+            app.UseHttpsRedirection()
+                .UseBlazorFrameworkFiles()
+                .UseStaticFiles()
+                .UseRouting();
 
             app.UseEndpoints(endpoints =>
             {
