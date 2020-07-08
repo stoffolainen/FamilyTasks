@@ -11,6 +11,9 @@ namespace FamilyTasks.Infrastructure.Contexts
         }
 
         public DbSet<User> Users { get; set; }
+        public DbSet<Activity> Activities { get; set; }
+        public DbSet<Chore> Chores { get; set; }
+        public DbSet<ChoreGroup> ChoreGroups { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
